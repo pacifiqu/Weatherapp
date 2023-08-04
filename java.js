@@ -1,5 +1,5 @@
 const apiKey = '6b13b6ddfd184a45b91102653230408';
-const apiURL = 'http://api.weatherapi.com/v1/current.json';
+const apiURL = 'https://api.weatherapi.com/v1/current.json';
 
 function getWeatherData(location) {
   const url = `${apiURL}?key=${apiKey}&q=${location}`;
@@ -30,6 +30,7 @@ function processWeatherData(data, useCelsius) {
         const weatherData = processWeatherData(data, useCelsius);
         displayWeatherInfo(weatherData);
       });
+      
   });
   function displayWeatherInfo(weatherData) {
     const weatherInfoDiv = document.getElementById('weatherInfo');
@@ -39,4 +40,4 @@ function processWeatherData(data, useCelsius) {
       <p>Weather: ${weatherData.weatherDescription}</p>
     `;
   }
-      
+s      
